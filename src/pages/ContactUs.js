@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -14,6 +14,9 @@ const Phone = tw.span`text-sm mt-0 block text-gray-500`;
 
 export default () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 
   return (

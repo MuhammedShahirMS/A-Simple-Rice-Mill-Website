@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
@@ -21,6 +21,9 @@ import MachineryImage from "images/AI Generated/Rice Processing Machinery.jpeg";
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <AnimationRevealPage>
