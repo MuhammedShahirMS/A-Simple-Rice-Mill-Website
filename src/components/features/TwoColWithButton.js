@@ -69,10 +69,6 @@ export default ({
   return (
     <Container>
       <TwoColumn>
-        <ImageColumn>
-          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             <Subheading>{subheading}</Subheading>
@@ -83,6 +79,10 @@ export default ({
             </PrimaryButton>}
           </TextContent>
         </TextColumn>
+        <ImageColumn>
+          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
+          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
+        </ImageColumn>
       </TwoColumn>
     </Container>
   );

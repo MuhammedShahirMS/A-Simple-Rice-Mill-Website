@@ -123,7 +123,7 @@ export default () => {
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
-        textOnLeft={true}
+        // textOnLeft={true}
         hideButton = {true}
       />
       {/* <Testimonial
