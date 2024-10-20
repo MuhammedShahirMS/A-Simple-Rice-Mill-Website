@@ -124,6 +124,7 @@ export default () => {
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
         textOnLeft={true}
+        hideButton = {true}
       />
       {/* <Testimonial
         subheading=""
