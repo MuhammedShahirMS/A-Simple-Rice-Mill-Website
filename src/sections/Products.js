@@ -41,7 +41,7 @@ export default () => {
       const productsTransformed = data.items.map(item => ({
         title: item.fields.title,
         imageSrc: `https:${assets[item.fields.image[0].sys.id]}`, // Get the URL from includes
-        price: "$10.99", // Replace with actual price if available in your Contentful model
+        price: '₹ ' + item.fields.price.toFixed(2), // Replace with actual price if available in your Contentful model
         rating: "4.5", // Replace with actual rating if available
         reviews: "23",  // Replace with actual reviews if available
         url: "#" // Set the actual product URL if needed
