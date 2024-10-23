@@ -35,7 +35,7 @@ export default () => {
         // primaryButtonText="See Portfolio"
         imageSrc = {RiceMillImage}
         hideButton = {true}
-        description=" For 34 years, we've perfected homegrown excellence, sourcing paddy
+        description=" For 50 years, we've perfected homegrown excellence, sourcing paddy
               exclusively from Kerala's fertile lands. Supporting local farmers
               and communities, we bring you the freshest quality rice. Kerala's
               pride, our legacy promotes the state's agricultural heritage."
@@ -48,6 +48,7 @@ export default () => {
         imageSrc = {MachineryImage}
         textOnLeft={false}
         description="At Pachakam,  we're driven to revolutionize rice excellence through cutting-edge milling technology and rigorous quality control and prioritize environmental sustainability"
+        hideButton = {true}
       />
       <Features
         subheading={<Subheading>Our Values</Subheading>}

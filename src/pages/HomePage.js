@@ -7,10 +7,14 @@ import Hero from "components/hero/TwoColumnWithVideo.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
-
+import pachakamAdVideoUrl from '../videos/Pachakam Ad Video.mp4'
 import riceImages from "../images/AI Generated/Cooked rice.jpg";
-import img1 from "../images/AI Generated/Mill Photo.jpg";
-import img2 from "../images/AI Generated/Paddy harvesting.jpg";
+import carouselImg1 from "../images/collage/1.jpg";
+import carouselImg2 from "../images/collage/2.jpg";
+import carouselImg3 from "../images/collage/3.jpg";
+import carouselImg4 from "../images/collage/4.jpg";
+import carouselImg5 from "../images/collage/5.jpg";
+import carouselImg6 from "../images/collage/6.jpg";
 import img3 from "../images/AI Generated/Rice Mill Outer view.jpeg";
 import img4 from "../images/AI Generated/Rice Dish.jpeg";
 import ProductSection from "../sections/Products";
@@ -25,7 +29,7 @@ export default () => {
 
   const navigate = useNavigate()
 
-  const images = [img1, img2];
+  const images = [carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5, carouselImg6];
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -60,14 +64,16 @@ export default () => {
         watchVideoButtonText="Watch us"
         carouselImages={images}
         handleScroll={handleScroll}
+        watchVideoYoutubeUrl={pachakamAdVideoUrl}
       />
 
         <MainFeature
-          subheading={<Subheading>Established Since 1990</Subheading>}
+          subheading={<Subheading>Established Since 1974</Subheading>}
           heading={
             <>
-              We've been serving for
-              <wbr /> <HighlightedText>over 34 years.</HighlightedText>
+            <HighlightedText>50 years of</HighlightedText>
+              Tradition, Quality and Customer satisfaction
+              <wbr /> 
             </>
           }
           description={

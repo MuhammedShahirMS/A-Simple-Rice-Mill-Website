@@ -31,7 +31,7 @@ export default () => {
               <>
                 <Address>
                   
-                <AddressLine>Mundeth Modern Rice Mill</AddressLine>
+                <AddressLine>Mundeth Agro Mills</AddressLine>
                   <AddressLine>Kalady - Cheranalloor Road</AddressLine>
                   <AddressLine> Onambilly, Kalady, Kerala - 683544</AddressLine>
                 </Address>

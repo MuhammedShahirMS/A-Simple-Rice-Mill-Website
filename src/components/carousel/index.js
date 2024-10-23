@@ -48,7 +48,7 @@ const Carousel = ({ images }) => {
       >
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <Image style={{maxHeight : '50vh'}} src={image} alt={`Carousel Image ${index}`} />
+            <Image src={image} alt={`Carousel Image ${index}`} />
           </CarouselItem>
         ))}
       </CarouselInner>
