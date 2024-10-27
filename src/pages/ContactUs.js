@@ -26,12 +26,12 @@ export default () => {
       <ContactDetails
         cards={[
           {
-            title: "Edavoor",
+            title: "Mundeth Agro Mills",
             description: (
               <>
                 <Address>
                   
-                <AddressLine>Mundeth Agro Mills</AddressLine>
+                <AddressLine>Edavoor</AddressLine>
                   <AddressLine>Kalady - Cheranalloor Road</AddressLine>
                   <AddressLine> Onambilly, Kalady, Kerala - 683544</AddressLine>
                 </Address>

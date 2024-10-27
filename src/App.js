@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyles from 'styles/GlobalStyles';
 import { css } from "styled-components/macro"; //eslint-disable-line
+import WhatsAppChatButton from "components/misc/WhatsappChat";
 
 /*
  * This is the entry point component of this project. You can change the below exported default App component to any of
@@ -128,6 +129,7 @@ export default function App() {
           <Route path="/about_us" element={<AboutUs />} />
         </Routes>
       </Router>
+      <WhatsAppChatButton/>
     </>
   );
 }
