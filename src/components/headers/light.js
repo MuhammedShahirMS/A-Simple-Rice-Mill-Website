@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl mx-auto
+  max-w-screen-2xl mx-auto
 `;
 
 export const NavLinks = tw.div`inline-block`;
