@@ -5,6 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import send from '../../../netlify/functions/sendEmail.js'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -57,11 +58,36 @@ export default ({
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); 
-    
+  console.log('ASiadsjij');
+  
+    const data = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+  
+    try {
+      const response = await fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+      if (result.success) {
+        alert('Message sent successfully!');
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred, please try again later.');
+    }
   };
+  
 
   return (
     <Container>
