@@ -70,7 +70,7 @@ export default ({
     };
   
     try {
-      const response = await fetch('/.netlify/functions/sendEmail', {
+      const response = await fetch('https://pachakamrice.com/.netlify/functions/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

@@ -3,18 +3,16 @@
 import sgMail from '@sendgrid/mail'
 
 exports.handler = async function (event) {
-  // Parse form data from the request body
   const { name, email, message } = JSON.parse(event.body);
 
-  // Set SendGrid API Key from environment variable
   sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
 
   // Configure the email content
   const msg = {
-    to: process.env.REACT_APP_RECIPIENT_EMAIL,  // recipient's email from env variable
-    from: 'your_verified_email@example.com',  // verified sender email on SendGrid
+    to: process.env.REACT_APP_RECIPIENT_EMAIL,
+    from: email,  // verified sender email on SendGrid
     subject: `New message from ${name}`,
-    text: `You have received a new message from ${name} (${email}):\n\n${message}`,
+    text: message
   };
 
   try {
