@@ -5,6 +5,9 @@ import sgMail from '@sendgrid/mail'
 exports.handler = async function (event) {
   const { name, email, message } = JSON.parse(event.body);
 
+  console.log('The API key we talk about is', process.env.REACT_APP_SENDGRID_API_KEY);
+  
+
   sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
 
   // Configure the email content
