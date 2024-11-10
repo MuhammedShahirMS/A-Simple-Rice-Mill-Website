@@ -12,8 +12,9 @@ exports.handler = async function (event) {
 
   // Configure the email content
   const msg = {
-    to: process.env.REACT_APP_RECIPIENT_EMAIL,
-    from: email,  // verified sender email on SendGrid
+    to: process.env.REACT_APP_RECEIPENT_EMAIL,
+    replyTo : email,
+    from: process.env.REACT_APP_SENDER_EMAIL,  // verified sender email on SendGrid
     subject: `New message from ${name}`,
     text: message
   };
