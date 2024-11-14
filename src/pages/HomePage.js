@@ -18,6 +18,7 @@ import carouselImg6 from "../images/collage/6.jpg";
 import img3 from "../images/AI Generated/Rice Mill Outer view.jpeg";
 import img4 from "../images/AI Generated/Rice Dish.jpeg";
 import ProductSection from "../sections/Products";
+import Header from "../components/headers/light";
 
 const Subheading = tw.span`tracking-wider text-sm font-medium`;
 const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
@@ -49,6 +50,8 @@ export default () => {
 
   return (
     <AnimationRevealPage>
+    <Header handleScroll = {handleScroll}/>
+    {/* <div style={{marginTop : 100}}>A AHA</div> */}
       <Hero
         heading={
           <>
