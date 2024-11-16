@@ -26,7 +26,7 @@ const TabControl = styled.div`
 
 const TabContent = tw(motion.div)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
 const CardContainer = tw.div`mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
-const Card = tw(motion.a)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0`;
+const Card = tw(motion.a)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0 cursor-pointer`;
 const CardImageContainer = styled.div`
   ${props => css`background-image: url("${props.imageSrc}");`}
   ${tw`h-56 xl:h-64 bg-center bg-cover relative rounded-t`}
@@ -112,16 +112,16 @@ export default ({
           >
             {tabs[tabKey].length ? tabs[tabKey].map((card, index) => (
               <CardContainer key={index}>
-                <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
+                <Card className="group" initial="rest" whileHover="hover" animate="rest">
                   <CardImageContainer imageSrc={card.imageSrc}>
-                    <CardRatingContainer>
+                    {/* <CardRatingContainer>
                       <CardRating>
                         <StarIcon />
                         {card.rating}
                       </CardRating>
                       <CardReview>({card.reviews})</CardReview>
-                    </CardRatingContainer>
-                    <CardHoverOverlay
+                    </CardRatingContainer> */}
+                    {/* <CardHoverOverlay
                       variants={{
                         hover: {
                           opacity: 1,
@@ -135,7 +135,7 @@ export default ({
                       transition={{ duration: 0.3 }}
                     >
                       <CardButton>Buy Now</CardButton>
-                    </CardHoverOverlay>
+                    </CardHoverOverlay> */}
                   </CardImageContainer>
                   <CardText>
                     <CardTitle>{card.title}</CardTitle>
