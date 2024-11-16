@@ -9,6 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import EmptyState from "components/Empty";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -74,6 +75,8 @@ export default ({
   const tabsKeys = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
 
+  console.log('Is there actually data ?', data.length ? true : false);
+
   return (
     <Container>
       <ContentWithPaddingXl>
@@ -107,7 +110,7 @@ export default ({
             initial={activeTab === tabKey ? "current" : "hidden"}
             animate={activeTab === tabKey ? "current" : "hidden"}
           >
-            {tabs[tabKey].map((card, index) => (
+            {tabs[tabKey].length ? tabs[tabKey].map((card, index) => (
               <CardContainer key={index}>
                 <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
                   <CardImageContainer imageSrc={card.imageSrc}>
@@ -141,7 +144,7 @@ export default ({
                   </CardText>
                 </Card>
               </CardContainer>
-            ))}
+            )) : <EmptyState/>}
           </TabContent>
         ))}
       </ContentWithPaddingXl>

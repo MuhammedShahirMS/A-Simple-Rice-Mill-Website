@@ -15,6 +15,7 @@ import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/dot-pattern.svg";
 import DesignIllustration from "../../images/design-illustration.svg";
 import Carousel from "components/carousel/index.js";
+import Header from '../headers/light'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -80,9 +81,16 @@ export default ({
 
   const primaryButtonClickHandler = () => handleScroll(primaryButtonId)
 
+  const HeaderParentContainer = tw.div`
+  relative
+  pt-[50px]`; //    <!-- Ensures that content doesn't overlap with fixed header -->
+
   return (
     <>
   
+  <HeaderParentContainer>
+  <Header handleScroll = {handleScroll}/>
+  </HeaderParentContainer>
       <Carousel images={carouselImages} autoplay={true} interval={1000} />
       <Container>
         <TwoColumn>

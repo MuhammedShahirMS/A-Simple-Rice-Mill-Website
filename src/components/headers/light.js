@@ -13,12 +13,10 @@ import { useNavigate } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
-   fixed top-0 left-0 right-0 z-10 bg-white pt-[10px]
+   fixed top-0 left-0 right-0 z-10 bg-white pt-[20px] pl-[40px]
 `;
 
-const ParentContainer = tw.div`
-  relative
-  pt-[100px]`; //    <!-- Ensures that content doesn't overlap with fixed header -->
+
 
 export const NavLinks = tw.div`inline-block`;
 
@@ -109,7 +107,6 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   links = links || defaultLinks;
 
   return (
-    <ParentContainer>
     <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks} handleScroll = {handleScroll}>
         {logoLink}
@@ -126,7 +123,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>
-    </ParentContainer>
+
   );
 };
 
