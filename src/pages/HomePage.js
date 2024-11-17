@@ -49,7 +49,6 @@ export default () => {
 
   return (
     <AnimationRevealPage>
-    {/* <div style={{marginTop : 100}}>A AHA</div> */}
       <Hero
         heading={
           <>

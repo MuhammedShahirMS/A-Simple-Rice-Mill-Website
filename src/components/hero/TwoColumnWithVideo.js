@@ -83,7 +83,7 @@ export default ({
 
   const HeaderParentContainer = tw.div`
   relative
-  // pt-[50px]
+  h-[80px]
   `; //    <!-- Ensures that content doesn't overlap with fixed header -->
 
   return (
