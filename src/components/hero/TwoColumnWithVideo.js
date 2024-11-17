@@ -82,9 +82,7 @@ export default ({
   const primaryButtonClickHandler = () => handleScroll(primaryButtonId)
 
   const HeaderParentContainer = tw.div`
-  relative
-  h-[80px]
-  `; //    <!-- Ensures that content doesn't overlap with fixed header -->
+  relative h-[80px]`; //    <!-- Ensures that content doesn't overlap with fixed header -->
 
   return (
     <>
