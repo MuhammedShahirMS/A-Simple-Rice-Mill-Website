@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
-   fixed top-0 left-0 right-0 z-10 bg-white pt-[20px] pl-[40px]
+   fixed top-0 left-0 right-0 z-10 bg-white pl-[40px]
 `;
 
 
