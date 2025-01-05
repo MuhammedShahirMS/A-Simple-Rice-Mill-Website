@@ -15,7 +15,7 @@ import carouselImg3 from "../images/collage/3.jpg";
 import carouselImg4 from "../images/collage/4.jpg";
 import carouselImg5 from "../images/collage/5.jpg";
 import carouselImg6 from "../images/collage/6.jpg";
-import img3 from "../images/AI Generated/Rice Mill Outer view.jpeg";
+import img3 from "../images/AI Generated/Rice Mill Outer view.jpg";
 import img4 from "../images/AI Generated/Rice Dish.jpeg";
 import ProductSection from "../sections/Products";
 

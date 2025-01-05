@@ -15,8 +15,8 @@ import EcoFriendlyIcon from "images/eco-friendly.svg";
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
-import RiceMillImage from "images/AI Generated/Rice Mill.jpeg";
-import MachineryImage from "images/AI Generated/Rice Processing Machinery.jpeg";
+import RiceMillImage from "images/AI Generated/Rice Mill.jpg";
+import MachineryImage from "images/AI Generated/Rice Processing Machinery.jpg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
