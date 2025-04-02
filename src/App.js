@@ -28,7 +28,7 @@ import HomePage from "pages/HomePage.js";
 import Products from "pages/Products";
 
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import ContactUs from "pages/ContactUs";
 import AboutUs from "pages/AboutUs";
 
@@ -42,14 +42,12 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          {/* <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} /> */}
-          {/* <Route path="/components/:type/:name" element={<ComponentRenderer />} /> */}
-          {/* <Route path="/thank-you" element={<ThankYouPage />} /> */}
-          {/* <Route path="/" element={<MainLandingPage />} /> */}
+         
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact_us" element={<ContactUs />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/lander" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
       <WhatsAppChatButton/>
